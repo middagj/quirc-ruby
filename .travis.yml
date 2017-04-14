@@ -4,9 +4,13 @@ rvm:
 - 2.0
 - 2.1
 - 2.2
-- 2.3
-- 2.4
-- rbx-2
+- 2.3.4
+- 2.4.1
+- ruby-head
+- rubinius-3
+- rubinius-2
 matrix:
   allow_failures:
-  - rvm: rbx-2
+  - rvm: ruby-head
+  - rvm: rubinius-3
+  - rvm: rubinius-2
