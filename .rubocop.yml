@@ -1,0 +1,35 @@
+AllCops:
+  DisplayCopNames: true
+  TargetRubyVersion: 2.0
+
+ClassAndModuleChildren:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
+Style/AndOr:
+  EnforcedStyle: conditionals
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: always
+  Exclude:
+    - Gemfile
+    - Rakefile
+    - '*.gemspec'
+
+Style/GlobalVars:
+  Exclude:
+    - ext/quirc/extconf.rb
+
+Style/SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: no_space
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: consistent_comma
