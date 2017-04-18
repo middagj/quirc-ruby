@@ -1,3 +1,4 @@
+---
 language: ruby
 sudo: required
 dist: trusty
@@ -15,6 +16,8 @@ matrix:
   - rvm: ruby-head
   - rvm: rubinius-3
   - rvm: rubinius-2
+notifications:
+  email: false
 deploy:
   provider: rubygems
   api_key:
