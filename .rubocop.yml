@@ -26,6 +26,12 @@ Style/GlobalVars:
   Exclude:
     - ext/quirc/extconf.rb
 
+Style/IndentArray:
+  EnforcedStyle: consistent
+
+Style/IndentHash:
+  EnforcedStyle: consistent
+
 Style/SpaceAroundEqualsInParameterDefault:
   EnforcedStyle: no_space
 
