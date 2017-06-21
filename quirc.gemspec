@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.required_ruby_version = ">= 2.0"
   s.add_development_dependency "minitest", "~> 5.0"
   s.add_development_dependency "rake-compiler", "~> 1.0"
-  s.add_development_dependency "rubocop", "~> 0.48"
+  s.add_development_dependency "rubocop", "~> 0.49"
   s.add_development_dependency "oily_png", "~> 1.0"
 
   s.extensions << "ext/quirc/extconf.rb"

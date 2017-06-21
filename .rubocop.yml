@@ -12,6 +12,15 @@ Documentation:
 Metrics/LineLength:
   Max: 120
 
+Layout/IndentArray:
+  EnforcedStyle: consistent
+
+Layout/IndentHash:
+  EnforcedStyle: consistent
+
+Layout/SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: no_space
+
 Style/AndOr:
   EnforcedStyle: conditionals
 
@@ -25,15 +34,6 @@ Style/FrozenStringLiteralComment:
 Style/GlobalVars:
   Exclude:
     - ext/quirc/extconf.rb
-
-Style/IndentArray:
-  EnforcedStyle: consistent
-
-Style/IndentHash:
-  EnforcedStyle: consistent
-
-Style/SpaceAroundEqualsInParameterDefault:
-  EnforcedStyle: no_space
 
 Style/StringLiterals:
   EnforcedStyle: double_quotes
