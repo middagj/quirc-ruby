@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.author      = "Jacob Middag"
   s.email       = "jacob@gaddim.nl"
-  s.homepage    = "https://github.com/middagj/quirc"
+  s.homepage    = "https://github.com/middagj/quirc-ruby"
   s.summary     = "QR decoder based on quirc"
   s.description = "Ruby bindings for C library quirc that extracts and decode QR images"
   s.license     = "MIT"
