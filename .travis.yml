@@ -3,7 +3,6 @@ language: ruby
 sudo: required
 dist: trusty
 rvm:
-- 2.0
 - 2.1
 - 2.2
 - 2.3.7
