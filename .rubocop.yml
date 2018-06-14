@@ -1,10 +1,7 @@
 ---
 AllCops:
   DisplayCopNames: true
-  TargetRubyVersion: 2.0
-
-ClassAndModuleChildren:
-  Enabled: false
+  TargetRubyVersion: 2.1
 
 Documentation:
   Enabled: false
@@ -38,5 +35,8 @@ Style/GlobalVars:
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 
-Style/TrailingCommaInLiteral:
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: consistent_comma
