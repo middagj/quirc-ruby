@@ -1,7 +1,7 @@
 ---
 AllCops:
   DisplayCopNames: true
-  TargetRubyVersion: 2.1
+  TargetRubyVersion: 2.2
 
 Documentation:
   Enabled: false
