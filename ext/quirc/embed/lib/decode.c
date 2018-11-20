@@ -117,7 +117,7 @@ static const uint8_t gf256_log[256] = {
 	0x74, 0xd6, 0xf4, 0xea, 0xa8, 0x50, 0x58, 0xaf
 };
 
-const static struct galois_field gf256 = {
+static const struct galois_field gf256 = {
 	.p = 255,
 	.log = gf256_log,
 	.exp = gf256_exp
@@ -790,12 +790,18 @@ static quirc_decode_error_t decode_kanji(struct quirc_data *data,
 
 	for (i = 0; i < count; i++) {
 		int d = take_bits(ds, 13);
+		int msB = d / 0xc0;
+		int lsB = d % 0xc0;
+		int intermediate = (msB << 8) | lsB;
 		uint16_t sjw;
 
-		if (d + 0x8140 >= 0x9ffc)
-			sjw = d + 0x8140;
-		else
-			sjw = d + 0xc140;
+		if (intermediate + 0x8140 <= 0x9ffc) {
+			/* bytes are in the range 0x8140 to 0x9FFC */
+			sjw = intermediate + 0x8140;
+		} else {
+			/* bytes are in the range 0xE040 to 0xEBBF */
+			sjw = intermediate + 0xc140;
+		}
 
 		data->payload[data->payload_len++] = sjw >> 8;
 		data->payload[data->payload_len++] = sjw & 0xff;

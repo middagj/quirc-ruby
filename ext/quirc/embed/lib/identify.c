@@ -196,9 +196,7 @@ static void threshold(struct quirc *q)
 		threshold_s = THRESHOLD_S_MIN;
 
 	for (y = 0; y < q->h; y++) {
-		int row_average[q->w];
-
-		memset(row_average, 0, sizeof(row_average));
+		memset(q->row_average, 0, q->w * sizeof(int));
 
 		for (x = 0; x < q->w; x++) {
 			int w, u;
@@ -216,12 +214,12 @@ static void threshold(struct quirc *q)
 			avg_u = (avg_u * (threshold_s - 1)) /
 				threshold_s + row[u];
 
-			row_average[w] += avg_w;
-			row_average[u] += avg_u;
+			q->row_average[w] += avg_w;
+			q->row_average[u] += avg_u;
 		}
 
 		for (x = 0; x < q->w; x++) {
-			if (row[x] < row_average[x] *
+			if (row[x] < q->row_average[x] *
 			    (100 - THRESHOLD_T) / (200 * threshold_s))
 				row[x] = QUIRC_PIXEL_BLACK;
 			else
@@ -427,7 +425,7 @@ static void finder_scan(struct quirc *q, int y)
 {
 	quirc_pixel_t *row = q->pixels + y * q->w;
 	int x;
-	int last_color;
+	int last_color = 0;
 	int run_length = 0;
 	int run_count = 0;
 	int pb[5];
