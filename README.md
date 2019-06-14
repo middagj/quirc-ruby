@@ -29,7 +29,7 @@ encoded = <<~EOD
 EOD
 
 img = Zlib::Inflate.inflate(Base64.decode64(encoded))
-res = Quirc.decode(img, 44, 44).first
+res = Quirc.decode(img, 120, 120).first
 puts res.payload
 ```
 
