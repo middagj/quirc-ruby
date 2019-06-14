@@ -5,7 +5,7 @@ require "helper.rb"
 describe Quirc do
   describe "binary string" do
     it "should decode" do
-      result = Quirc.decode(binary_fixture("hello.gz"), 44, 44).first
+      result = Quirc.decode(binary_fixture("hello.gz"), 120, 120).first
       assert_equal 1, result.ecc_level
       assert_equal "Hello World!", result.payload
     end

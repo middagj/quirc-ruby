@@ -20,16 +20,12 @@ require 'zlib'
 require 'quirc'
 
 encoded = <<~EOD
-  eJx9lF2OhDAMg/cQPVceeg/ExeGxfWR3rU9W+sMMEmKYhMRxXD+9DVd/fv+v
-  p/eHe471sw7X2ZXbz7Nzz7FWS/gtSm2q12pt3HOs1bjc5YraVC9z55j+A9dY
-  L6774Js1Bq6xXonjJr7Hfv4vf8dMzh1j67u5MobvuSv2z7nf8O1xYuZu/Xbu
-  S653MsdWvkvk/vbYusfc3xzb9aH/jlucrbFVd2C8D+1ijekdtUq37ODpV8Tl
-  XOdIq6oudPxWvX5GKWEMPBUXR6gqc5lJOf5Gk5GLqhIDXKm3sYgZ5YpP/cM5
-  s3bREP38hE914pxZu2iTfvlMvcLrqF2wJKbUK7yO2mVGP2FWWLQDZgGLcHvv
-  aARmyTVHzCjc1kxqJP1DddDWfcBp+kpiMG5xom0dN5ymX+36sA7FiDBkJnud
-  NWkM8JcI2NusZzbFTNaKKuznxN3gylpRxd2zUNAVnGVxCHPOHc81E0ThLGs3
-  bAQMq++IWe80T++bv0k/qobnp0O/+Zu1gHqTmU8+ydR0MDNvfmYW0tnNzO5n
-  ZiGd3cx88jN7GlOqD/y++Zn1CnvqwxmYtTPqdYyhktWz3vUqLv4AZ3HyYg==
+  eJzt0kEOwyAMRNHe/9LpFo1mwK1IYqQ/mwQDfl5wXYQQQgghT+cziZ7Tb+Ue
+  7vvurL76Vvvhvuvqu0jvqHoP9wx3dh73fHdWxz3Hrc5TvYfbx01RP83j7uH2
+  cCtzuf+7g7uvr74ZrY9r967cedxebrrjZtK9tMbt4Y7+L/V/Tdzn3DRH+td5
+  0hq3h5veR+qjNTcPbh+3Mpd7Qzt6497vat+Voe9Oa7j93GpdrXGt+7i9XO3j
+  +jknzYB7huvmGM+7GXHPcWeOM3B7upV5Rlvvun3cHm6K+qt5qibucy4hhBBC
+  yN58AXWDGDc=
 EOD
 
 img = Zlib::Inflate.inflate(Base64.decode64(encoded))
