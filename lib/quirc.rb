@@ -2,6 +2,10 @@
 
 module Quirc
   def self.decode(image, width=nil, height=nil)
+    unless image.respond_to?(:to_grayscale_stream) || (width && height)
+      raise ArgumentError, "Arguments width and height are required if binary string is passed"
+    end
+
     width ||= image.public_send(:width)
     height ||= image.public_send(:height)
     if image.respond_to?(:to_grayscale_stream)
