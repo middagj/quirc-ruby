@@ -1,18 +1,22 @@
 ---
 AllCops:
   DisplayCopNames: true
-  TargetRubyVersion: 2.2
+  TargetRubyVersion: 2.3
 
 Documentation:
   Enabled: false
 
+Metrics/BlockLength:
+  Exclude:
+    - test/**/*.rb
+
 Metrics/LineLength:
   Max: 120
 
-Layout/IndentArray:
+Layout/IndentFirstArrayElement:
   EnforcedStyle: consistent
 
-Layout/IndentHash:
+Layout/IndentFirstHashElement:
   EnforcedStyle: consistent
 
 Layout/SpaceAroundEqualsInParameterDefault:
