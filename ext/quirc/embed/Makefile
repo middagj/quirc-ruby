@@ -19,7 +19,7 @@ BUILD_DIR ?= .
 
 LIB_VERSION = 1.0
 
-CFLAGS ?= -O3 -Wall -fPIC
+CFLAGS ?= -O3 -Wall -fPIC -std=c99
 LIB_OBJ = \
     lib/decode.o \
     lib/identify.o \
