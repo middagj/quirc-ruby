@@ -1,7 +1,8 @@
 ---
 AllCops:
   DisplayCopNames: true
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.4
+  NewCops: enable
 
 Documentation:
   Enabled: false
@@ -13,10 +14,10 @@ Metrics/BlockLength:
 Metrics/LineLength:
   Max: 120
 
-Layout/IndentFirstArrayElement:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
-Layout/IndentFirstHashElement:
+Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
 
 Layout/SpaceAroundEqualsInParameterDefault:

@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "helper.rb"
+require "helper"
 
 describe Quirc do
   describe "binary string" do

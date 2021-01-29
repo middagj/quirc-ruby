@@ -17,5 +17,5 @@ find_header("quirc.h", "#{SRC_DIR}/lib") or missing("quirc.h")
 build_library
 $LOCAL_LIBS << LIB_FILE
 
-$CFLAGS << ' --std=c99'
+$CFLAGS << " --std=c99"
 create_makefile("quirc/quirc")
