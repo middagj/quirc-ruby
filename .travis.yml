@@ -9,13 +9,15 @@ rvm:
 - 2.7.2
 - 3.0.0
 - ruby-head
-- rubinius-3
-- rubinius-2
+- rbx-5
+- rbx-4
+- rbx-3
 matrix:
   allow_failures:
   - rvm: ruby-head
-  - rvm: rubinius-3
-  - rvm: rubinius-2
+  - rvm: rbx-5
+  - rvm: rbx-4
+  - rvm: rbx-3
 notifications:
   email: false
 deploy:
